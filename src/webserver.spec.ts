@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 beforeAll(() => {
-  app.get('/', (req, res) => {
+  app.get('/', (_, res) => {
     res.send('Hello World!')
   })
   app.listen(port)
