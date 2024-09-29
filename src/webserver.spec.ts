@@ -1,17 +1,13 @@
 import axios from 'axios';
 import express from 'express'
-import { Server } from 'http';
 const app = express()
 const port = 3000
-
-let listener: Server;
 
 beforeAll(() => {
   app.get('/', (req, res) => {
     res.send('Hello World!')
   })
-  
-  listener = app.listen(port)
+  app.listen(port)
 })
 
 describe("Make a good and bad async unit test", () => {
